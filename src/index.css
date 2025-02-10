@@ -5,30 +5,47 @@
  
 @layer base {
   :root {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
-    --radius: 0.5rem;
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+    --primary: 263 85% 50%;
+    --primary-foreground: 0 0% 100%;
+    --accent: 176 100% 44%;
+  }
+}
+
+@layer components {
+  .gradient-border {
+    @apply relative rounded-xl;
+    background: linear-gradient(
+      to right,
+      theme('colors.cyber.accent'),
+      theme('colors.cyber.neon')
+    );
+    padding: 1px;
+  }
+
+  .gradient-border > * {
+    @apply bg-cyber-dark rounded-xl;
+  }
+
+  .hero-gradient {
+    background: radial-gradient(
+      circle at top right,
+      theme('colors.cyber.purple') 0%,
+      transparent 50%
+    );
+  }
+
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl;
   }
 }
 
 @layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-cyber-accent to-cyber-neon;
+  }
+
   .cyber-glitch {
     @apply relative overflow-hidden;
   }
@@ -51,19 +68,9 @@
 
 body {
   @apply bg-cyber-dark text-white overflow-x-hidden;
-}
-
-.glass-panel {
-  @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-lg shadow-lg;
-}
-
-.neon-border {
-  @apply relative;
-  box-shadow: 0 0 5px theme('colors.cyber.neon'), 
-              0 0 10px theme('colors.cyber.neon'),
-              0 0 15px theme('colors.cyber.neon');
-}
-
-.terminal-text {
-  @apply font-mono;
+  background: radial-gradient(
+    circle at top right,
+    theme('colors.cyber.purple') 0%,
+    transparent 50%
+  );
 }

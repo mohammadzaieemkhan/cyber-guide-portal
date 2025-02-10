@@ -21,14 +21,14 @@ const Index = () => {
       <div className="h-screen bg-cyber-dark flex items-center justify-center">
         <div className="text-cyber-neon animate-pulse">
           <Terminal className="w-16 h-16 animate-spin" />
-          <p className="mt-4 terminal-text">Initializing System...</p>
+          <p className="mt-4 font-mono">Initializing System...</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-cyber-dark">
+    <div className="min-h-screen bg-cyber-dark hero-gradient">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -39,8 +39,8 @@ const Index = () => {
         <div className="fixed bottom-8 right-8 glass-panel p-4 z-50">
           <div className="flex items-center gap-4">
             <BrainCircuit className="w-8 h-8 text-cyber-neon animate-pulse" />
-            <div className="terminal-text text-sm">
-              <p className="text-cyber-purple">AI Guide: Ready to assist</p>
+            <div className="font-mono text-sm">
+              <p className="text-cyber-accent">AI Guide: Ready to assist</p>
               <p className="text-xs text-gray-400">Click sections to explore</p>
             </div>
           </div>
@@ -49,14 +49,21 @@ const Index = () => {
         {/* Header Section */}
         <header className="text-center mb-16">
           <motion.h1
-            className="text-4xl md:text-6xl font-bold mb-4 cyber-glitch"
-            data-text="Mohammad Zaieem Khan"
+            className="text-5xl md:text-7xl font-bold mb-4 text-gradient"
             initial={{ y: -50 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.5 }}
           >
             Mohammad Zaieem Khan
           </motion.h1>
+          <motion.p 
+            className="text-xl text-gray-400 mb-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+          >
+            Full Stack Developer & Web3 Enthusiast
+          </motion.p>
           <motion.div
             className="flex justify-center gap-6 mt-8"
             initial={{ scale: 0 }}
@@ -67,17 +74,21 @@ const Index = () => {
               href="https://github.com/yourusername"
               target="_blank"
               rel="noopener noreferrer"
-              className="glass-panel p-3 hover:text-cyber-neon transition-colors"
+              className="gradient-border"
             >
-              <Github className="w-6 h-6" />
+              <div className="p-3 hover:text-cyber-neon transition-colors">
+                <Github className="w-6 h-6" />
+              </div>
             </a>
             <a
               href="https://linkedin.com/in/yourusername"
               target="_blank"
               rel="noopener noreferrer"
-              className="glass-panel p-3 hover:text-cyber-neon transition-colors"
+              className="gradient-border"
             >
-              <Linkedin className="w-6 h-6" />
+              <div className="p-3 hover:text-cyber-neon transition-colors">
+                <Linkedin className="w-6 h-6" />
+              </div>
             </a>
           </motion.div>
         </header>
@@ -94,7 +105,9 @@ const Index = () => {
                 <button
                   onClick={() => handleSectionChange(section)}
                   className={`glass-panel px-6 py-3 uppercase text-sm tracking-wider ${
-                    currentSection === section ? "neon-border text-cyber-neon" : ""
+                    currentSection === section 
+                      ? "border-cyber-neon text-cyber-neon border"
+                      : "hover:border-cyber-accent hover:text-cyber-accent border border-transparent"
                   }`}
                 >
                   {section}
@@ -116,9 +129,9 @@ const Index = () => {
             <section className="space-y-6">
               <div className="flex items-center gap-4 mb-8">
                 <Terminal className="w-8 h-8 text-cyber-neon" />
-                <h2 className="text-2xl font-bold">System.out.println("Hello World!");</h2>
+                <h2 className="text-2xl font-bold text-gradient">System.out.println("Hello World!");</h2>
               </div>
-              <p className="terminal-text leading-relaxed">
+              <p className="font-mono leading-relaxed">
                 <span className="text-cyber-neon">{">"}</span> Full Stack Developer
                 <br />
                 <span className="text-cyber-neon">{">"}</span> Passionate about creating innovative solutions

@@ -26,38 +26,14 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         cyber: {
-          dark: "#1A1F2C",
+          dark: "#0F1114",
           purple: "#7E69AB",
-          neon: "#8B5CF6",
-          accent: "#D946EF",
+          neon: "#14F195",
+          accent: "#9945FF",
         },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
         },
       },
       keyframes: {
@@ -76,14 +52,6 @@ export default {
           "60%": { transform: "translate(2px, 2px)" },
           "80%": { transform: "translate(2px, -2px)" },
         },
-        typing: {
-          from: { width: "0" },
-          to: { width: "100%" },
-        },
-        "cursor-blink": {
-          "0%, 100%": { opacity: "1" },
-          "50%": { opacity: "0" },
-        },
         float: {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
@@ -93,12 +61,7 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         glitch: "glitch 0.5s ease-in-out infinite",
-        typing: "typing 3.5s steps(40, end)",
-        "cursor-blink": "cursor-blink 0.75s step-end infinite",
         float: "float 6s ease-in-out infinite",
-      },
-      backgroundImage: {
-        "cyber-grid": "linear-gradient(rgba(26, 31, 44, 0.95), rgba(26, 31, 44, 0.95)), url('/grid.png')",
       },
     },
   },
