@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Github, Linkedin, BrainCircuit, Code, Terminal, Database, Key } from "lucide-react";
+import { Github, Linkedin, BrainCircuit, Code, Terminal, Database, Sparkles, Webhook, BookOpen, ScrollText, Trophy, Mail, Phone } from "lucide-react";
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -56,14 +56,25 @@ const Index = () => {
           >
             Mohammad Zaieem Khan
           </motion.h1>
-          <motion.p 
-            className="text-xl text-gray-400 mb-8"
+          <motion.div 
+            className="flex flex-col md:flex-row items-center justify-center gap-4 text-gray-400"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
-            Full Stack Developer & Web3 Enthusiast
-          </motion.p>
+            <div className="flex items-center gap-2">
+              <Mail className="w-4 h-4 text-cyber-neon" />
+              <a href="mailto:khan0zaieem89@gmail.com" className="hover:text-cyber-neon transition-colors">
+                khan0zaieem89@gmail.com
+              </a>
+            </div>
+            <div className="flex items-center gap-2">
+              <Phone className="w-4 h-4 text-cyber-neon" />
+              <a href="tel:+918493931426" className="hover:text-cyber-neon transition-colors">
+                +91 8493931426
+              </a>
+            </div>
+          </motion.div>
           <motion.div
             className="flex justify-center gap-6 mt-8"
             initial={{ scale: 0 }}
@@ -134,9 +145,9 @@ const Index = () => {
               <p className="font-mono leading-relaxed">
                 <span className="text-cyber-neon">{">"}</span> Full Stack Developer
                 <br />
-                <span className="text-cyber-neon">{">"}</span> Passionate about creating innovative solutions
+                <span className="text-cyber-neon">{">"}</span> Web3 Enthusiast
                 <br />
-                <span className="text-cyber-neon">{">"}</span> Experienced in modern web technologies
+                <span className="text-cyber-neon">{">"}</span> Building innovative solutions with modern technologies
               </p>
             </section>
           )}
@@ -144,15 +155,23 @@ const Index = () => {
           {currentSection === "education" && (
             <section className="space-y-6">
               <div className="flex items-center gap-4 mb-8">
-                <Database className="w-8 h-8 text-cyber-neon" />
+                <BookOpen className="w-8 h-8 text-cyber-neon" />
                 <h2 className="text-2xl font-bold">Education.decrypt()</h2>
               </div>
-              <div className="space-y-4">
-                <div className="glass-panel p-4">
-                  <h3 className="text-lg font-bold text-cyber-purple">University Name</h3>
-                  <p className="text-sm text-gray-400">Degree • Year - Year</p>
+              <div className="space-y-6">
+                <div className="glass-panel p-6">
+                  <h3 className="text-xl font-bold text-cyber-accent">Model Institute of Engineering and Technology</h3>
+                  <p className="text-gray-400">B. Tech in Computer Science Engineering</p>
+                  <div className="flex justify-between mt-2">
+                    <p className="text-cyber-neon">Current CGPA: 8.11</p>
+                    <p className="text-gray-400">2022 - 2026</p>
+                  </div>
                 </div>
-                {/* Add more education items */}
+                <div className="glass-panel p-6">
+                  <h3 className="text-xl font-bold text-cyber-accent">Indira Gandhi National Open University</h3>
+                  <p className="text-gray-400">B.A. (Hons.) in History</p>
+                  <p className="text-gray-400 mt-2">2022 - 2025</p>
+                </div>
               </div>
             </section>
           )}
@@ -163,16 +182,43 @@ const Index = () => {
                 <Code className="w-8 h-8 text-cyber-neon" />
                 <h2 className="text-2xl font-bold">Projects.map()</h2>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="glass-panel p-6 hover:neon-border transition-all duration-300">
-                  <h3 className="text-lg font-bold text-cyber-purple mb-2">Project Name</h3>
-                  <p className="text-sm text-gray-400 mb-4">Project description goes here</p>
-                  <div className="flex gap-2">
-                    <span className="px-2 py-1 text-xs glass-panel text-cyber-neon">React</span>
-                    <span className="px-2 py-1 text-xs glass-panel text-cyber-neon">Node.js</span>
+              <div className="grid grid-cols-1 gap-6">
+                <motion.div 
+                  className="glass-panel p-6"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <h3 className="text-xl font-bold text-cyber-accent mb-2">SQL-Based YouTube Playlist Manager App</h3>
+                  <p className="text-gray-400 mb-4">Built a desktop app for creating, managing, and deleting YouTube playlist albums, with SQL for data storage and a custom video player.</p>
+                  <div className="flex gap-2 flex-wrap">
+                    <span className="px-2 py-1 text-xs glass-panel text-cyber-neon">C#</span>
+                    <span className="px-2 py-1 text-xs glass-panel text-cyber-neon">SQL</span>
                   </div>
-                </div>
-                {/* Add more project cards */}
+                </motion.div>
+
+                <motion.div 
+                  className="glass-panel p-6"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <h3 className="text-xl font-bold text-cyber-accent mb-2">WhatsApp Medicine Ordering & Appointment Bot</h3>
+                  <p className="text-gray-400 mb-4">Developed a bot to simplify ordering medicine from local pharmacies and booking clinic appointments via WhatsApp.</p>
+                  <div className="flex gap-2">
+                    <span className="px-2 py-1 text-xs glass-panel text-cyber-neon">Landbot</span>
+                  </div>
+                </motion.div>
+
+                <motion.div 
+                  className="glass-panel p-6"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <h3 className="text-xl font-bold text-cyber-accent mb-2">Channelling Bot for AI Tools</h3>
+                  <p className="text-gray-400 mb-4">Created a UiPath bot to mediate between users and trending AI tools, providing a streamlined and personalized AI experience.</p>
+                  <div className="flex gap-2">
+                    <span className="px-2 py-1 text-xs glass-panel text-cyber-neon">UiPath</span>
+                  </div>
+                </motion.div>
               </div>
             </section>
           )}
@@ -180,20 +226,76 @@ const Index = () => {
           {currentSection === "skills" && (
             <section className="space-y-6">
               <div className="flex items-center gap-4 mb-8">
-                <Key className="w-8 h-8 text-cyber-neon" />
+                <Sparkles className="w-8 h-8 text-cyber-neon" />
                 <h2 className="text-2xl font-bold">Skills.unlock()</h2>
               </div>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {["JavaScript", "React", "Node.js", "Python", "SQL", "C#", "Git", "Docker"].map((skill) => (
-                  <motion.div
-                    key={skill}
-                    className="glass-panel p-4 text-center"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <span className="text-cyber-neon">{skill}</span>
-                  </motion.div>
-                ))}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="glass-panel p-6">
+                  <h3 className="text-lg font-bold text-cyber-accent mb-4 flex items-center gap-2">
+                    <Code className="w-5 h-5" />
+                    Programming Languages
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 glass-panel text-cyber-neon">C++</span>
+                    <span className="px-3 py-1 glass-panel text-cyber-neon">Python</span>
+                  </div>
+                </div>
+
+                <div className="glass-panel p-6">
+                  <h3 className="text-lg font-bold text-cyber-accent mb-4 flex items-center gap-2">
+                    <Webhook className="w-5 h-5" />
+                    Web Technologies
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 glass-panel text-cyber-neon">WordPress</span>
+                    <span className="px-3 py-1 glass-panel text-cyber-neon">SEO</span>
+                    <span className="px-3 py-1 glass-panel text-cyber-neon">Google AdWords</span>
+                    <span className="px-3 py-1 glass-panel text-cyber-neon">Prompt Engineering</span>
+                  </div>
+                </div>
+
+                <div className="glass-panel p-6">
+                  <h3 className="text-lg font-bold text-cyber-accent mb-4 flex items-center gap-2">
+                    <Database className="w-5 h-5" />
+                    Data Management
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 glass-panel text-cyber-neon">MySQL</span>
+                  </div>
+                </div>
+
+                <div className="glass-panel p-6">
+                  <h3 className="text-lg font-bold text-cyber-accent mb-4 flex items-center gap-2">
+                    <ScrollText className="w-5 h-5" />
+                    Soft Skills
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 glass-panel text-cyber-neon">English Proficiency</span>
+                    <span className="px-3 py-1 glass-panel text-cyber-neon">Content Writing</span>
+                    <span className="px-3 py-1 glass-panel text-cyber-neon">Creative Writing</span>
+                  </div>
+                </div>
+
+                <div className="glass-panel p-6 md:col-span-2">
+                  <h3 className="text-lg font-bold text-cyber-accent mb-4 flex items-center gap-2">
+                    <Trophy className="w-5 h-5" />
+                    Certifications
+                  </h3>
+                  <div className="space-y-4">
+                    <div className="glass-panel p-4">
+                      <h4 className="text-cyber-neon">Fundamentals of Cybersecurity</h4>
+                      <p className="text-sm text-gray-400">Coursera • Sep 2023 - Dec 2023</p>
+                    </div>
+                    <div className="glass-panel p-4">
+                      <h4 className="text-cyber-neon">C++ Programming Training Workshop</h4>
+                      <p className="text-sm text-gray-400">Programming Pathshala • Aug 2023</p>
+                    </div>
+                    <div className="glass-panel p-4">
+                      <h4 className="text-cyber-neon">The Joy of Using Python</h4>
+                      <p className="text-sm text-gray-400">NPTEL • Jul 2023 - Oct 2023</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
           )}
